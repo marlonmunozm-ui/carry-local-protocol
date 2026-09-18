@@ -68,13 +68,26 @@ scalability).
 
 ## Citation
 
-    @misc{munoz2026carrylocal,
-      title  = {Carry Local Protocol: parallel word-level carry protocol
-                for arbitrary-precision arithmetic},
-      author = {Muñoz, Marlon Javier and Botía Valderrama, Javier Fernando},
-      year   = {2026},
-      url    = {https://github.com/TU-USUARIO/carry-local-protocol}
-    }
+
+If you use this code in your research, please cite the companion paper:
+
+> **"Local Carry Decision and Informational Irrelevance in Large-Base Positional Arithmetic"**
+> Marlon Javier Muñoz Muñoz and Javier Fernando Botía Valderrama
+> Submitted to *IEEE Latin America Transactions*, 2026.
+> Preprint: arXiv:XXXX.XXXXX (to be added)
+
+```bibtex
+@misc{munoz2026carrylocal,
+  author       = {Munoz, Marlon Javier and Bot\'{i}a Valderrama, Javier Fernando},
+  title        = {Carry Local Protocol: parallel word-level carry protocol
+                  for arbitrary-precision arithmetic},
+  year         = {2026},
+  publisher    = {GitHub},
+  journal      = {GitHub repository},
+  howpublished = {\url{https://github.com/marlonmunozm-ui/carry-local-protocol}},
+  note         = {Companion code for the paper \textit{Local Carry Decision
+                  and Informational Irrelevance in Large-Base Positional Arithmetic}}
+}
 
 ## License
 
