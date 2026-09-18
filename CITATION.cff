@@ -1,0 +1,27 @@
+```yaml
+cff-version: 1.2.0
+message: "If you use this software, please cite the companion manuscript."
+title: "Carry Local Protocol"
+abstract: "Parallel word-level carry protocol for arbitrary-precision arithmetic. Companion code for the manuscript 'Local Carry Decision and Informational Irrelevance in Large-Base Positional Arithmetic'."
+authors:
+  - family-names: "Muñoz"
+    given-names: "Marlon Javier"
+    affiliation: "Universidad de Antioquia, Colombia"
+  - family-names: "Botía Valderrama"
+    given-names: "Javier Fernando"
+    affiliation: "Universidad de Antioquia, Colombia"
+date-released: "2026-01-15"
+version: "1.0.0"
+license: MIT
+repository-code: "https://github.com/marlonmunozm-ui/carry-local-protocol"
+url: "https://github.com/marlonmunozm-ui/carry-local-protocol"
+preferred-citation:
+  type: unpublished
+  title: "Local Carry Decision and Informational Irrelevance in Large-Base Positional Arithmetic"
+  authors:
+    - family-names: "Muñoz"
+      given-names: "Marlon Javier"
+    - family-names: "Botía Valderrama"
+      given-names: "Javier Fernando"
+  year: 2026
+  notes: "Manuscript"
