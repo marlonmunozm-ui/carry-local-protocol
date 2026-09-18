@@ -1,8 +1,6 @@
 `timescale 1ns/1ps
 
-// ----------------------------------------------------------------
-// Cadena de N nucleos de carry local
-// ----------------------------------------------------------------
+
 module carry_chain
 #(parameter W=32, parameter N=60)
 (
