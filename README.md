@@ -68,13 +68,11 @@ scalability).
 
 ## Citation
 
-
-If you use this code in your research, please cite the companion paper:
+If you use this code in your research, please cite the companion manuscript:
 
 > **"Local Carry Decision and Informational Irrelevance in Large-Base Positional Arithmetic"**
-> Marlon Javier Muñoz Muñoz and Javier Fernando Botía Valderrama
-> Submitted to *IEEE Latin America Transactions*, 2026.
-> Preprint: arXiv:XXXX.XXXXX (to be added)
+> Marlon Javier Muñoz Muñoz and Javier Fernando Botía Valderrama, 2026.
+> Companion code: https://github.com/marlonmunozm-ui/carry-local-protocol
 
 ```bibtex
 @misc{munoz2026carrylocal,
@@ -85,10 +83,7 @@ If you use this code in your research, please cite the companion paper:
   publisher    = {GitHub},
   journal      = {GitHub repository},
   howpublished = {\url{https://github.com/marlonmunozm-ui/carry-local-protocol}},
-  note         = {Companion code for the paper \textit{Local Carry Decision
-                  and Informational Irrelevance in Large-Base Positional Arithmetic}}
+  note         = {Companion code for the manuscript \textit{Local Carry
+                  Decision and Informational Irrelevance in Large-Base
+                  Positional Arithmetic} (Munoz and Bot\'{i}a Valderrama, 2026)}
 }
-
-## License
-
-MIT — see [LICENSE](LICENSE).
