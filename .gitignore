@@ -1,0 +1,21 @@
+  # Verilog / simulación
+  *.vcd
+  *.vvp
+  dump.vcd
+  output.txt
+  
+  # Python
+  __pycache__/
+  *.py[cod]
+  *.egg-info/
+  .venv/
+  venv/
+  
+  # Figuras generadas localmente
+  fig*.png
+  
+  # OS / IDE
+  .DS_Store
+  Thumbs.db
+  .vscode/
+  .idea/
