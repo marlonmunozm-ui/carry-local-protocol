@@ -1,8 +1,6 @@
 `timescale 1ns/1ps
 
-// ----------------------------------------------------------------
-// Referencia secuencial (ripple carry) para comparacion
-// ----------------------------------------------------------------
+
 module ripple_ref
 #(parameter W=32, parameter N=60)
 (
