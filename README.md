@@ -20,6 +20,21 @@ their outgoing carry without waiting, and only frontier cells stall and
 forward the flag. The design is homogeneous, asynchronous (no global clock),
 race-free by construction, and scales with linear area O(m).
 
+
+## Note on the clock in the RTL
+
+The Verilog model in `verilog/` is a **synchronous behavioral model intended
+for functional verification**: the `clk` signal discretizes the protocol
+phases (local sum and classification, flag emission, reception and
+correction) into simulation cycles. It does **not** constitute a physical
+global-clock requirement of the protocol. Inter-nucleus coordination relies
+exclusively on the flag handshake (`flag_out`/`flag_ready`,
+`flag_in`/`flag_valid`), a two-wire completion-signaling primitive that can
+be realized without any shared time base — e.g., self-timed completion
+detection, GALS integration, or bundled-data asynchronous logic. The
+clock-free claim refers to the protocol specification; the clocked RTL is
+one convenient verification vehicle for it.
+
 ## Repository structure
 
 - `verilog/` — RTL: `carry_nucleus.v` (cell), `carry_chain.v` (chain of N
