@@ -1,0 +1,43 @@
+name: CI
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+
+jobs:
+  verilog-and-validation:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install Icarus Verilog
+        run: sudo apt-get update && sudo apt-get install -y iverilog
+
+      - name: Compile Verilog
+        run: |
+          iverilog -o tb \
+            verilog/carry_nucleus.v \
+            verilog/carry_chain.v \
+            verilog/ripple_ref.v \
+            verilog/tb_comparison.v
+
+      - name: Run testbench
+        run: vvp tb > output.txt
+
+      - name: Cross-validate with Python
+        run: python3 python/cross_validate.py output.txt
+
+  python-checks:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Install dependencies
+        run: pip install -r python/requirements.txt
+      - name: Statistics validation
+        run: python3 python/statistics.py
+      - name: Figure generation
+        run: python3 python/figures.py
