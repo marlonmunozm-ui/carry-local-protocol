@@ -7,7 +7,6 @@ Companion code for the paper:
 > Positional Arithmetic"**
 > Marlon Javier Muñoz Muñoz and Javier Fernando Botía Valderrama —
 > Universidad de Antioquia, Colombia
-> Preprint: arXiv:XXXX.XXXXX · Submitted to IEEE Latin America Transactions
 
 ## What is this?
 
