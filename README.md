@@ -52,7 +52,7 @@ one convenient verification vehicle for it.
 ## Running the simulation
 
     cd verilog
-    iverilog -o tb tb_comparison.v
+    iverilog -o tb carry_nucleus.v carry_chain.v ripple_ref.v tb_comparison.v
     vvp tb > output.txt
 
 Runs 5 seeds × 60 words of 32 bits (1920-bit numbers), comparing the parallel
@@ -75,10 +75,14 @@ scalability).
 
 ## Results summary
 
-- Parallel chain completes in 2–4 protocol cycles, independent of N.
+- Parallel chain completes in 2 protocol cycles for N = 15, 30 and 60 in all
+  five runs with random data, independent of N.
 - Ripple reference: N cycles (60 for N = 60).
 - Results identical between parallel, ripple, and Python reference.
-- No frontier chains of length ≥ 2 observed in 5×10⁵ samples for k ≥ 9.
+- Maximum frontier chain length observed in 5×10⁵ samples: 19, 10, 5 and 2
+  for k = 1, 2, 4 and 8 (seed 7, `python/figures.py`). The expected number of
+  chains of length 2 is about N·B⁻² (≈1.9 for k = 9, <0.5 for k ≥ 10), so such
+  chains become practically unobservable at word-level bases.
 
 ## Citation
 
@@ -101,3 +105,4 @@ If you use this code in your research, please cite the companion manuscript:
                   Decision and Informational Irrelevance in Large-Base
                   Positional Arithmetic} (Munoz and Bot\'{i}a Valderrama, 2026)}
 }
+```
